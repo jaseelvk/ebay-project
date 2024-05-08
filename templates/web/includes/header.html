@@ -1,0 +1,104 @@
+{% load static %}
+    <section id="HeaderTop">
+        <section class="wrapper">
+            <div class="container">
+                <div class="left">
+                    <ul>
+                        <li>
+                            <a href="{% url 'web:index'%}">
+                                <span class="logoGreen">
+                                    <img  src="{% static 'images/headerGreen.svg' %}" alt="GreenLogo"/>
+                                </span>
+                                
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">eBay Deals</a>
+                        </li>
+                        <li>
+                            <a href="#">Find a Store</a>
+                        </li>
+                        <li>
+                            <a href="#">Help</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li>
+                            <a href="#">Sell</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="watchList">
+                                    <h5>Watch List</h5>
+                                    <span class="arrow">
+                                        <img src="{% static 'images/arrow.svg' %} " alt="arrow"/>
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                    <span class ="imageContainer">
+                                        <img src="{% static 'images/userProfile.png' %}" alt="user"/>
+                                    </span>
+                                    
+                                    <span class="arrow">
+                                        <img src="{% static 'images/arrow.svg' %}" alt="arrow"/>
+                                    </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="notify">
+                                    <img src="{% static 'images/notification.svg' %}" alt="notfication" />
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="cart">
+                                    <img src="{% static 'images/store.svg' %}" alt="store" />
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="searchContainer">
+        <section class="wrapper">
+             <div class="mainContainer">
+                  <span class="logContainer">
+                       <img src="{% static 'images/logo.svg' %}" alt="Logo"/>
+                  </span>
+                  <div class="searchBox">
+                       <span class="categorySearch">
+                            <form class="category_items" action="">
+                                 <select name="options" id="options">
+                                     {% for category in categories %}
+                                     <option value="{{ category.category_name }}" {% if category.category_name == selected_category %}selected{% endif %}>
+                                         {{ category.category_name }}
+                                     </option>
+                                     {% endfor %}
+                                 </select>
+                             </form>
+                             
+                       </span>
+                       <form id="searchForm" action="/" method="get">
+                            <span class="search">
+                                 <img src="{% static 'images/search.svg' %}"/>
+                            </span>
+                            <input type="text" name="query" placeholder="Search for enything"/>
+                           
+                       </form>
+                  </div>
+                  <div class="Buttons">
+                      <button id="searchButton" type="submit">Search</button> 
+                      <a href="#">Advanced</a>
+                  </div>
+             </div>
+        </section>
+   </section>

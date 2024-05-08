@@ -1,0 +1,207 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block content %}
+     {% include 'web/includes/header.html' %} 
+
+          {% comment %} category select {% endcomment %}
+          <section id="categorySelect">
+               <div class="container">
+                    <button id="toggleCategories"  type="submit">
+                         <i class="fa-solid fa-list"></i>
+                    </button>
+                    <ul>
+                         <li>
+                              <a href="#" class="active" onclick="setActive(this)">Home</a>
+                         </li>
+                         <li class="sv_flex">
+                              <a href="{% url 'web:my_wishlist' %}" onclick="setActive(this)">
+                                   <span class="like">
+                                        <img src="{% static 'images/likesv.svg' %}"  alt="Like"/>
+                                   </span>
+                                   Saved
+                              </a>
+                         </li>
+                         <li>
+                              <a href="#"  onclick="setActive(this)">Electronics</a>
+                         </li>
+                         <li>
+                              <a href="#"  onclick="setActive(this)">Motors</a>
+                         </li>
+                         <li>
+                              <a href="#"  onclick="setActive(this)">Home & Garden</a>
+                         </li>
+                         <li>
+                              <a href="#"  onclick="setActive(this)">Clothing & Accessories</a>
+                         </li>
+                         <li>
+                              <a href="#"  onclick="setActive(this)">Sports</a>
+                         </li>
+                         <li> 
+                              <a href="#"  onclick="setActive(this)">Health & Beauty</a>
+                         </li>
+                         <li>
+                              <a href="#"  onclick="setActive(this)">Toys</a>
+                         </li>
+                         <li>
+                              <a href="#"  onclick="setActive(this)">Business & industrial</a>
+                         </li>
+                         <li>
+                              <a href="#"  onclick="setActive(this)">Collectables</a>
+                         </li>
+                         <li>
+                              <a href="#"  onclick="setActive(this)">Deals & Sales</a>
+                         </li>
+                    </ul>
+               </div>
+          </section>
+          {% comment %}  {% endcomment %}
+          <section id="banner">
+               <section class="wrapper">
+                   <div class="bnContainer">
+                       {% for product in featured_products %}
+                       <div class="bnItem">
+                              <a href ="{% url 'web:product' id=product.id %}">
+                                   <div class="bnImageContainer">
+                                        <img src="{{ product.product_image.url }}" alt="{{ product.product_name }}">
+                                   </div>
+                                   
+                                   <div class="bnTextContainer">
+                                        <h1>{{ product.product_name }}</h1>
+                                        <p>{{ product.product_description|truncatewords:10 }}</p>
+                                        <span class="buyButton">
+                                        <button href="#">Shop now</button>
+                                        </span>
+                                   </div>
+                              </a>
+  
+                       </div>
+                       {% endfor %}
+                   </div>
+               </section>
+           </section>
+           {% comment %}  {% endcomment %}
+
+           {% comment %} added {% endcomment %}
+           <section id="e_platform">
+               <section class="wrapper">
+                   {% if products %}
+                   {% for section in sections %}
+                   <div class="e_container">
+                       <div class="e_header_container">
+                           <h2>{{ section.section_name }}</h2>
+                           {% if not query and not selected_category %}
+                           <button type="button">See all</button>
+                       {% endif %}
+                       </div>
+                       <div class="products">
+                           <i id="left-btn" class="fa-solid fa-angle-left shop-left"></i>
+                           <ul>
+                               {% for product in products %}
+                               {% if product.product_section == section %}
+                               <li>
+                                   <a href="{% url 'web:product' id=product.id %}">
+                                       <span class="product_image">
+                                           <img src="{{ product.product_image.url }}" alt="{{ product.product_name }}" />
+
+                                       </span>
+                                       <div class="product_info">
+                                           <h2>{{ product.product_name | truncatewords:10 }}</h2>
+                                           <p class="price"> AU $ {{ product.product_price }}</p>
+                                       </div>
+                                   </a>
+                                   
+                                   {% if product.id in wishlist_products %}
+                                   <button type="submit" class="add-to-wishList hidden" data-product-id="{{ product.id }}">
+                                       <img src="{% static 'images/favstar.svg' %}" />
+                                   </button>
+                                   <button type="submit" class="add-to-wishList-rounded-button" data-product-id="{{ product.id }}">
+                                       <img id="change" src="{% static 'images/filled.svg' %}" />
+                                   </button>
+                               {% else %}
+                                   <button type="submit" class="add-to-wishList" data-product-id="{{ product.id }}">
+                                       <img src="{% static 'images/favstar.svg' %}" />
+                                   </button>
+                                   <button type="submit" class="add-to-wishList-rounded-button hidden" data-product-id="{{ product.id }}">
+                                       <img id="change" src="{% static 'images/filled.svg' %}" />
+                                   </button>
+                               {% endif %}
+                                    
+                               </li>
+                               {% endif %}
+                               {% endfor %}
+                           </ul>
+                           <i id="right-btn" class="fa-solid fa-angle-right shop-right"></i>
+                       </div>
+                   </div>
+                   {% endfor %}
+                   {% else %}
+                   <div class="error-message">
+                       <span class ="errorImage">
+                           <img class="animated-error-image"  src="{% static "images/errorimage.jpg" %}" />
+                       </span>
+                   </div>
+                   {% endif %}
+               </section>
+           </section>
+           
+           
+           
+ {% comment %}  {% endcomment %}
+     <footer>
+          <section class="wrapper">
+               <div class="footer_container">
+                    <ul>
+                         <li>
+                              <a class="header" href="#">Buy</a>
+                              <a href="#">eBay Deals</a>
+                              <a href="#">eBay Mobile</a>
+                              <a href="#">eBay for Charity</a>
+                              <a href="#">eBay Stores</a>
+                              <a href="#">Gift Finder</a>
+                              <a href="#">Holidays and seasonal Occasions</a>
+                         </li>
+                         <li>
+                              <a class="header" href="#">Sell</a>
+                              <a href="#">eBay Deals</a>
+                              <a href="#">eBay Mobile</a>
+                              <a href="#">eBay for Charity</a>
+                              <a href="#">eBay Stores</a>
+                              <a href="#">Gift Finder</a>
+                              <a href="#">Holidays and seasonal Occasions</a>
+                         </li>
+                         <li>
+                              <a class="header" href="#">Stay Connected</a>
+                              <a href="#">eBay Deals</a>
+                              <a href="#">eBay Mobile</a>
+                              <a href="#">eBay for Charity</a>
+                              <a href="#">eBay Stores</a>
+                              <a href="#">Gift Finder</a>
+                              <a href="#">Holidays and seasonal Occasions</a>
+                         </li>
+                         <li>
+                              <a class="header" href="#">About eBay</a>
+                              <a href="#">eBay Deals</a>
+                              <a href="#">eBay Mobile</a>
+                              <a href="#">eBay for Charity</a>
+                              <a href="#">eBay Stores</a>
+                              <a href="#">Gift Finder</a>
+                              <a href="#">Holidays and seasonal Occasions</a>
+                         </li>
+                         <li>
+                              <a class="header" href="#">Help</a>
+                              <a href="#">eBay Returns</a>
+                              <a href="#">eBay Money Back Guaramtee</a>
+                              <div class="cammunity_container">
+                                   <a class="header" href="#">Community</a>
+                                   <a href="#">Announcemnts</a>
+                                   <a href="#">Discussion Forum</a>
+                                   <a href="#">Answer Centre</a>
+                                   <a href="#">Groups</a>
+                              </div>
+                         </li>
+                    </ul>
+               </div>
+               {% include 'web/includes/footer.html' %} 
+          </section>
+     </footer>  
+{% endblock %}

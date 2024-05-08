@@ -1,0 +1,98 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block content %}
+     {% include 'web/includes/header.html' %} 
+
+     <section id="e_platform">
+          <section class="wrapper">
+              <div class="e_container">
+                  <header>
+                      <h1>My Wishlist Items</h1>
+                  </header>
+                <div class="products">
+                  <ul>
+                      {% if wishlist %}
+                          {% for item in wishlist %}
+                          <li>
+                              <a href="{% url 'web:product' id=item.product_wishlist.id %}">
+                                  <span class="product_image">
+                                      <img src="{{ item.product_wishlist.product_image.url }}" alt="{{ item.product_wishlist.product_name }}" />
+                                  </span>
+                                  <div class="product_info">
+                                      <h2>{{ item.product_wishlist.product_name }}</h2>
+                                      <p class="price"> AU $ {{ item.product_wishlist.product_price }}</p>
+                                  </div>
+                              </a>
+                          </li>
+                          {% endfor %}
+                      {% else %}
+                          <div class="product-message">
+                              <span class ="noproducts">
+                                  <img class="animated-error-image"  src="{% static "images/no-products.jpg" %}" />
+                              </span>
+                          </div>
+                      {% endif %}
+                  </ul>
+              </div>
+              </div>
+          </section>
+      </section>
+    {% comment %}  {% endcomment %}
+    <footer>
+        <section class="wrapper">
+             <div class="footer_container">
+                  <ul>
+                       <li>
+                            <a class="header" href="#">Buy</a>
+                            <a href="#">eBay Deals</a>
+                            <a href="#">eBay Mobile</a>
+                            <a href="#">eBay for Charity</a>
+                            <a href="#">eBay Stores</a>
+                            <a href="#">Gift Finder</a>
+                            <a href="#">Holidays and seasonal Occasions</a>
+                       </li>
+                       <li>
+                            <a class="header" href="#">Sell</a>
+                            <a href="#">eBay Deals</a>
+                            <a href="#">eBay Mobile</a>
+                            <a href="#">eBay for Charity</a>
+                            <a href="#">eBay Stores</a>
+                            <a href="#">Gift Finder</a>
+                            <a href="#">Holidays and seasonal Occasions</a>
+                       </li>
+                       <li>
+                            <a class="header" href="#">Stay Connected</a>
+                            <a href="#">eBay Deals</a>
+                            <a href="#">eBay Mobile</a>
+                            <a href="#">eBay for Charity</a>
+                            <a href="#">eBay Stores</a>
+                            <a href="#">Gift Finder</a>
+                            <a href="#">Holidays and seasonal Occasions</a>
+                       </li>
+                       <li>
+                            <a class="header" href="#">About eBay</a>
+                            <a href="#">eBay Deals</a>
+                            <a href="#">eBay Mobile</a>
+                            <a href="#">eBay for Charity</a>
+                            <a href="#">eBay Stores</a>
+                            <a href="#">Gift Finder</a>
+                            <a href="#">Holidays and seasonal Occasions</a>
+                       </li>
+                       <li>
+                            <a class="header" href="#">Help</a>
+                            <a href="#">eBay Returns</a>
+                            <a href="#">eBay Money Back Guaramtee</a>
+                            <div class="cammunity_container">
+                                 <a class="header" href="#">Community</a>
+                                 <a href="#">Announcemnts</a>
+                                 <a href="#">Discussion Forum</a>
+                                 <a href="#">Answer Centre</a>
+                                 <a href="#">Groups</a>
+                            </div>
+                       </li>
+                  </ul>
+             </div>
+             {% include 'web/includes/footer.html' %} 
+        </section>
+   </footer>  
+{% endblock %}

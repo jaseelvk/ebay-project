@@ -1,0 +1,475 @@
+{% extends "base.html" %} 
+
+{% load static %}
+{% block content %}
+     {% include 'web/includes/header.html' %} 
+
+    <section id="product">
+        <section class="wrapper">
+            <div class="BackToBack">
+                <div class="left">
+                    <span class="arrow">
+                        <a href ="{% url 'web:index'%}">
+                            <img src="{% static 'images/arrowLeftShort.svg' %}" alt="arrowShort">
+                        </a>
+                    </span>
+                    <div class="serachresult">
+                        <a href="#">Back to serach results <b>/</b></a>
+                        <p>Listed in category <b>:</b></p>
+                        <p>{{instance.product_category}} <b>/</b></p>
+                        <p class="cansoled">{{instance.product_name | truncatechars:15 }}</p>
+                    </div>
+                </div>
+                <div class="right">
+                        <a href="#">Share</a>
+                        <a href="#">Report this item</a>
+                        <div class="rightLast">
+                            <p>Have one to sell?</p>
+                            <a class="sell" href="#">Sell it yourslef</a>
+                        </div>
+                </div>
+            </div>
+            <div class="MainContainer">
+                <div class="productImageContainer">
+                    <div class="border">
+                        <div class="productImage">
+                            <img src="{{instance.product_image.url}}" alt="{{product.product_name}}">
+                        </div>
+                    </div>
+                    <div class="ShortImage">
+                        {% for short_image in instance.short_images.all %}
+                            <span class="shortBorder"></span>
+                            
+                                <img src="{{ short_image.short_images.url }}" alt="Product Image">
+                        {% endfor %}
+                    </div>
+                    
+                    
+                </div>
+                <div class="info">
+                    
+                        <h1>{{instance.product_name}}</h1>
+
+                    <span class="ProductCondition">
+                        <h2>condition :</h2>
+                        <h2 class="brand">{{instance.product_Condition}}</h2>
+                    </span>
+                    <div class="quantitySection">
+                        <h2>Quantity :</h2>
+                        <div class="count">
+                           <input type="number"  id="quantityInput" value="1" min="0">
+                        </div>
+                        <div class="availables">
+                            <h3 id="availableCount">{{instance.product_available}} available</h3>
+                            <h3>/</h3>
+                            <h3 id="soldCount">{{instance.product_sold}} sold</h3>
+                        </div>
+                    </div>
+                    <div class="priceSection">
+                        <h2>Price :</h2>
+                        <div class="price">
+                            <h3>AU $ {{instance.product_price}}</h3>
+                        </div>
+                        <div class="options">
+                            <p>{{instance.product_option}}</p>
+                        </div>
+                    </div>
+                    <div class="buySection">
+                        <button id="buyButton" type="submit">Buy it now</button>
+                        <div class="buyLast">
+                            <button class="addCart" type="submit">Add to Cart</button>
+                            <select name="watchlist" id="watchlist"> 
+                                <option value="Add to watchlist">Add to watchlist</option>
+                                <option value="Add to watchlist">Add to watchlist</option> 
+                                <option value="Add to watchlist">Add to watchlist</option> 
+                                <option value="Add to watchlist">Add to watchlist</option> 
+                                <option value="Add to watchlist">Add to watchlist</option> 
+                                <option value="Add to watchlist">Add to watchlist</option> 
+                            </select>
+                        </div>
+                    </div>
+                    <div class="additionalContainer">
+                        <form action="#">
+                            <input  type="checkbox">
+                            <a href="#">Full Protection For Consoles and Other Household Items from XCover.com - AU $ <b>{{instance.product_addittional_fee}}</b></a>
+                        </form>
+                        <a class="change" href="#">I have read and agreed to the policy terms. The policy is provided by XCover.com and underwritten by Pacific International Insurance Pty Ltd.[1]</a>
+                    </div>
+                    <div class="paymentCard">
+                        <div class="paymentCategory">
+                            <div class="collectContainer">
+                                <h2>Collection: Click & Collect - Select store at checkout</h2>
+                            </div>
+                            <div class="postage">
+                                <h2>Postage: <b>Free</b> Standard Parcel Delivery - Located in: Eltham, VIC, Australia </h2>
+                            </div>
+                            <div class="delivery">
+                                <h2>Delivery: Estimated between <b>Tue , 12 Mar</b> and <b>Fri, 15 Mar</b> to 3000 </h2>
+                            </div>
+                        </div>
+                        <div class="retrunPolicey">
+                            <h2>Returns: 30-day returns.Buyer Payes for postage.</h2>
+                            <a href="#">See details</a>
+                        </div>
+                        <div class="paymentMenthod">
+                            <h2>Payment:</h2>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <img src="{% static 'images/paypal.svg' %}" alt="paypal">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="{% static 'images/Gpay.svg' %}" alt="Gpay">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="{% static 'images/visa.svg' %}" alt="visa">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="{% static 'images/card.svg' %}" alt="card">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="{% static 'images/americanExpress.svg' %}" alt="americanExpress">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="{% static 'images/card2.svg' %}" alt="card2">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="{% static 'images/zimp.svg' %}" alt="zimp">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="sellerInfo">
+                    <div class="sellercard">
+                        <div class="sellCardFlex">
+                            <span class="sellerProfile">
+                                <img src="{% static 'images/channel.png' %}" alt="seller">
+                            </span>
+                            <div class="sellerfeedbak">
+                                <h2>Tech Galore(2.3k)</h2>
+                                <p>99.2% postive feedback</p>
+                            </div>
+                            <div class="saved">
+                                <span class="saveImageContainer">
+                                    <img src="{% static 'images/save.svg' %}" alt="save">
+                                </span>
+                                <p>save</p>
+                            </div>
+                        </div>
+                        <div class="contactCard">
+                            <h2>Contact Seller</h2>
+                        </div>
+                        <h3>Registerd as a business Seller</h3>
+                    </div>
+                    <div class="priceDetails">
+                        <span class="tagimageContainer">
+                            <img src="{% static 'images/tag.svg' %}" alt="tag">
+                        </span>
+                        <h2>Take AU $29.94 off this item</h2>
+                        <a href="#">Show me how</a>
+                    </div>
+                    <div class="moneyBackContainer">
+                        <span class="moneyBackImage">
+                            <img src="{% static 'images/moneyBack.svg' %}" alt="moneyBack">
+                        </span>
+                        <div class="MoneyBackText">
+                            <h2>eBay Money Back Guarantee</h2>
+                            <p>Get the Item you orderd or your money back.</p>
+                        </div>
+                    </div>
+                    <div class="featuresContainer">
+                        <span class="featuresImage">
+                            <img src="{% static 'images/headerGreen.svg' %}" alt="features">
+                        </span>
+                        <div class="featuresText">
+                            <ul>
+                                <li>Trusted sellers</li>
+                                <li>Free express delivery and free returns for members</li>
+                            </ul>
+                            <a href="#">Try eBay Plus for free</a>
+                    </div>
+                </div>
+           
+        </section>
+    </section>
+    <section id="e_platform">
+        <section class="wrapper">
+            <div class="e_container">
+                    <div class="e_header_container">
+                       <h2>Similar sposored ietms</h2>
+                       <button type="button">
+                            see All
+                       </button>
+                    </div>
+                  <div class="products">
+                       
+                       <ul>
+                          {% for product in related_items %}
+                           <li>
+                               <a href="{% url 'web:product' id=product.id %}">
+                                   <span class="product_image">
+                                       <img src="{{product.product_image.url}}"alt="product1" />
+                                   </span>
+                                   <div class="product_info">
+                                       <h2>{{product.product_name}}</h2>
+                                       <p class="price"> AU ${{product.product_price}}</p>
+                                   </div>
+                               </a>
+                           </li>   
+                        {% endfor %}             
+                       </ul>
+                   </div>
+             </div>
+        </section>
+    </section>
+    <section id="detailCard">
+        <section class="wrapper">
+            <div class="MainContainer">
+                <div class="headerContainer">
+                    <button id="aboutButton"  type="submit">
+                        <h2>About this item</h2>
+                    </button>
+                    <button id="togglePostageButton" type="submit">
+                        <h2>postage, returns and payments</h2>
+                    </button>
+                </div>
+                <div class="bottomContainer" id="aboutContainer">
+                    <div class="taitle">
+                        <h2>Seller assumes all responsibility for this listing.</h2>
+                        <div class="updateContainer">
+                            <h2>Last updated on 07 Mar, 2024 11:41:46 AEDST View all revisions</h2>
+                            <a href="#">View all revisions</a>
+                        </div>
+                    </div>
+                    <h2 class="title">Item specifics</h2>
+                    <div class="detailCard">
+                      <div class="conditions">
+                        <ul>
+                            <li class="header">
+                                <h2>Condition</h2>
+                            </li>
+                            <li>
+                                <h2>Type</h2>
+                            </li>
+                            <li>
+                                <h2>Platform</h2>
+                            </li>
+                            <li>
+                                <h2>Connectivity</h2>
+                            </li>
+                            <li>
+                                <h2>MPN</h2>
+                            </li>
+                            <li>
+                                <h2>Storage Capacity</h2>
+                            </li>
+                            <li>
+                                <h2>Colour</h2>
+                            </li>
+                        </ul>
+                      </div>
+                      <div class="conditions">
+                        <ul>
+                            <li class="header" >
+                                <h2>Brand New: A brand-new, unused, unopened, undamaged item in its original packaging (where packaging ... Read more )</h2>
+                            </li>
+                            <li>
+                                <h2>Handheld System</h2>
+                            </li>
+                            <li>
+                                <h2>Nintendo Switch</h2>
+                            </li>
+                            <li>
+                                <h2>HDMI, LAN</h2>
+                            </li>
+                            <li>
+                                <h2>na</h2>
+                            </li>
+                            <li>
+                                <h2>64 GB</h2>
+                            </li>
+                            <li>
+                                <h2>Multicoloured</h2>
+                            </li>
+                        </ul>
+                      </div>
+                      <div class="conditions">
+                        <ul>
+                            <li >
+                                <h2><div class="conditions">
+                        <ul>
+                            <li >
+                                <h2>Brand <b>Nintendo</b></h2>
+                               
+                            </li>
+                            <li>
+                                <h2>Region Code <b>Region Free</b></h2>
+                               
+                            </li>
+                            <li>
+                                <h2>Model <b>Nintendo Switch (OLED Model)</b></h2>
+                            </li>
+                            <li>
+                                <h2>Features <b>Wi-Fi Capability</b></h2>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+             {% comment %} payments click show items  {% endcomment %}
+             <div class="bottomContainer" id="postageContainer">
+                <div class="taitle">
+                    <h2>postage, returns and payments all responsibility for this listing.</h2>
+                    <div class="updateContainer">
+                        <h2>Last updated on 010 Mar, 2025 11:41:46 AEDST View all revisions</h2>
+                        <a href="#">View all revisions</a>
+                    </div>
+                </div>
+                <h2 class="title">Buyer’s Responsibility (Remorse Return):</h2>
+                <div class="detailCard">
+                  <div class="conditions">
+                    <ul>
+                        <li class="header">
+                            <h2>Doesn’t fit</h2>
+                        </li>
+                        <li>
+                            <h2>Changed my mind.</h2>
+                        </li>
+                        <li>
+                            <h2>Found a better price.</h2>
+                        </li>
+                        <li>
+                            <h2>Just didn’t like it.</h2>
+                        </li>
+                        <li>
+                            <h2>Ordered by mistake.</h2>
+                        </li>
+                        <li>
+                            <h2>Colour aout</h2>
+                        </li>
+                    </ul>
+                  </div>
+                  <div class="conditions">
+                    <ul>
+                        <li class="header" >
+                            <h2>If the return label was provided by you,  and the product is  tracking details in the last 7 days.</h2>
+                        </li>
+                        <li>
+                            <h2>Handheld System</h2>
+                        </li>
+                        <li>
+                            <h2>Nintendo Switch</h2>
+                        </li>
+                        <li>
+                            <h2>HDMI, LAN</h2>
+                        </li>
+                        <li>
+                            <h2>na</h2>
+                        </li>
+                        <li>
+                            <h2>64 GB</h2>
+                        </li>
+                        <li>
+                            <h2>Multicoloured</h2>
+                        </li>
+                    </ul>
+                  </div>
+                  <div class="conditions">
+                    <ul>
+                        <li >
+                            <h2><div class="conditions">
+                    <ul>
+                        <li >
+                            <h2>Brand <b>Nintendo</b></h2>
+                           
+                        </li>
+                        <li>
+                            <h2>Region Code <b>Region Free</b></h2>
+                           
+                        </li>
+                        <li>
+                            <h2>Model <b>Nintendo Switch (OLED Model)</b></h2>
+                        </li>
+                        <li>
+                            <h2>Features <b>Wi-Fi Capability</b></h2>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+            {% comment %} end block items {% endcomment %}       
+        </section>
+    </section>
+    <section id="cardBottom">
+        <section class="wrapper">
+            <div class="MainContainer">
+                <div class="userinfo">
+                    <span class="userProfile">
+                        <img src="{% static 'images/channel.png' %}"alt="user" />
+                    </span>
+                    <div class="userText">
+                        <h2>Tech_Galore(2.3K)</h2>
+                        <p>99.2% positive feedback</p>
+                        <p >2.3K items sold</p>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="store" type="submit">Visit Store</button>
+                    <button class="contact" type="submit">Contact</button>
+                </div>
+            </div>
+        </section>
+    </section>
+    <footer>
+        <section class="wrapper">
+            <div class="bottomContainer">
+                <ul>
+                    <li>
+                        <a href="#">About eBay</a>
+                    </li>
+                    <li>
+                        <a href="#">Announcements</a>
+                    </li>
+                    <li>
+                        <a href="#">Community</a>
+                    </li>
+                    <li>
+                        <a href="#">Media Center</a>
+                    </li>
+                    <li>
+                        <a href="#">Seller Centre</a>
+                    </li>
+                    <li>
+                        <a href="#">Polices</a>
+                    </li>
+                    <li>
+                        <a href="#">Advertise</a>
+                    </li>
+                    <li>
+                        <a href="#">Help</a>
+                    </li>
+                    <li>
+                        <a href="#">Site Map</a>
+                    </li>
+                </ul>
+            </div>
+            {% include 'web/includes/footer.html' %} 
+        </section>
+    </footer>
+   
+{% endblock %} 

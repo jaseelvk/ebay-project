@@ -1,0 +1,272 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	background: transparent;
+	font-weight: normal;
+	text-decoration: none;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+ol, ul {
+	list-style: none;
+}
+del {
+	text-decoration: line-through;
+}
+body {
+	font-family: 'Poppins-Regular';
+	font-size: 17px;
+	color: #000;
+	overflow-x: hidden;
+	min-width: 320px;
+	font-weight: 500;
+}
+input,textarea,select{
+	font-family: 'Poppins-Regular';
+	font-weight: 500;
+}
+
+a{
+	color: #000;
+}
+.thumb{
+	display: block;
+}
+.thumb img{
+	display: block;
+	width:100%;
+}
+p{
+	line-height:1.6em;
+	font-size: 16px;
+    font-family: 'Poppins-Regular';
+	font-weight: 500;
+	color: #000;
+}
+.hidden{
+	display:none;
+}
+br.clear {
+	clear: both;
+	line-height: 0;
+}
+.wrapper {
+	width: 98%;
+    margin: 0 auto;
+    max-width: 1330px;
+}
+
+.flex-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('../fonts/Poppins-Bold.woff2') format('woff2'),
+        url('../fonts/Poppins-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url('../fonts/Poppins-Medium.woff2') format('woff2'),
+        url('../fonts/Poppins-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('../fonts/Poppins-Regular.woff2') format('woff2'),
+        url('../fonts/Poppins-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+#e_platform { 
+	padding: 20px 0;
+
+
+}
+
+#e_platform section.wrapper { 
+
+}
+
+#e_platform section.wrapper div.e_container { 
+	margin-top: 30px;
+
+}
+#e_platform section.wrapper div.e_container:first-child { 
+	margin-top: 0px;
+
+}
+
+
+#e_platform section.wrapper div.e_container div.e_header_container { 
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+
+}
+
+#e_platform section.wrapper div.e_container div.e_header_container h2 { 
+	font-size: 24px;
+	font-weight: 600;
+
+}
+
+#e_platform section.wrapper div.e_container div.e_header_container button { 
+	cursor: pointer;
+	text-decoration: underline;
+	font-size: 15px;
+
+
+}
+
+#e_platform section.wrapper div.e_container div.products { 
+	position: relative;
+	
+
+}
+
+#e_platform section.wrapper div.e_container div.products ul { 
+	 display:grid;
+	 grid-auto-flow: column;
+	 grid-auto-columns: calc((100% / 6));
+	 gap: 10px;
+	 overflow-x: auto;
+	 scroll-behavior: smooth;
+	 width: 100%;
+}
+#e_platform section.wrapper div.e_container div.products i {
+	height: 50px;
+    width: 50px;
+    background: #DBDBDB;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    right: -1%;
+    top: 26%;
+
+}
+#e_platform section.wrapper div.e_container div.products i:first-child {
+	left: -1%;
+    top: 26%;
+
+}
+#e_platform section.wrapper div.e_container div.products ul::-webkit-scrollbar {
+	display: none;
+}
+
+#e_platform section.wrapper div.e_container div.products ul li { 
+	width: 100%;
+	
+}
+
+#e_platform section.wrapper div.e_container div.products ul li a { 
+	width: 100%;
+	
+}
+
+#e_platform section.wrapper div.e_container div.products ul li a span.product_image { 
+	width: 100%;
+	display: block;
+	position: relative;
+
+}
+
+#e_platform section.wrapper div.e_container div.products ul li a span.product_image img { 
+	width: 100%;
+	display: block;
+	object-fit: contain;
+    height: auto !important;
+    aspect-ratio: 1.2;
+
+}
+#e_platform section.wrapper div.e_container div.products ul li a button {
+	position: absolute;
+	right: 0;
+	top: 18px;
+
+}
+#e_platform section.wrapper div.e_container div.products ul li a button img {
+	
+}
+
+#e_platform section.wrapper div.e_container div.products ul li a div.product_info { 
+	width: 100%;
+
+}
+
+#e_platform section.wrapper div.e_container div.products ul li a div.product_info h2 { 
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: normal; 
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    max-height: 48px; 
+    text-overflow: ellipsis;
+}
+
+
+
+#e_platform section.wrapper div.e_container div.products ul li a div.product_info p.price { 
+	margin-top: 10px;
+	font-size: 16px;
+	font-weight: 600;
+	
+
+}
+
+
+
+
+.product-message  {
+	margin: 30px auto;
+
+
+}
+.product-message .noproducts {
+	width: 300px;
+	display: block;
+	border-radius: 50%;
+	margin: 0 auto;
+	cursor: pointer;
+
+	
+}
+.product-message .noproducts img.animated-error-image {
+	width: 100%;
+	display: block;
+
+	animation: featuredAnimation 1s ease-in-out infinite alternate;
+	
+}
+@keyframes featuredAnimation {
+    from {
+        transform: scale(1);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+

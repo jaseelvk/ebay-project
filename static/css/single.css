@@ -1,0 +1,1299 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	background: transparent;
+	font-weight: normal;
+	text-decoration: none;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+ol {
+	list-style: none;
+}
+del {
+	text-decoration: line-through;
+}
+body {
+	font-family: 'Poppins-Regular';
+	font-size: 17px;
+	color: #000;
+	overflow-x: hidden;
+	min-width: 320px;
+	font-weight: 500;
+}
+input,textarea,select{
+	font-family: 'Poppins-Regular';
+	font-weight: 500;
+}
+
+a{
+	color: #000;
+}
+.thumb{
+	display: block;
+}
+.thumb img{
+	display: block;
+	width:100%;
+}
+p{
+	line-height:1.6em;
+	font-size: 16px;
+    font-family: 'Poppins-Regular';
+	font-weight: 500;
+	color: #000;
+}
+.hidden{
+	display:none;
+}
+br.clear {
+	clear: both;
+	line-height: 0;
+}
+.wrapper {
+	width: 98%;
+	margin: 0 auto;
+	max-width: 1380px;
+}
+
+.flex-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('../fonts/Poppins-Bold.woff2') format('woff2'),
+        url('../fonts/Poppins-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url('../fonts/Poppins-Medium.woff2') format('woff2'),
+        url('../fonts/Poppins-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('../fonts/Poppins-Regular.woff2') format('woff2'),
+        url('../fonts/Poppins-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Single page css */
+
+#product { 
+    padding-top: 10px;
+
+}
+
+#product section.wrapper { 
+
+}
+
+#product section.wrapper div.BackToBack { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+#product section.wrapper div.BackToBack div.left { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+#product section.wrapper div.BackToBack div.left span.arrow { 
+    width: 20px;
+    display: block;
+  
+
+}
+
+#product section.wrapper div.BackToBack div.left span.arrow img { 
+    width: 100%;
+    display: block;
+
+}
+
+#product section.wrapper div.BackToBack div.left div.serachresult { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#product section.wrapper div.BackToBack div.left div.serachresult a { 
+    font-size: 15px;
+    color: #1D4ED8;
+
+}
+#product section.wrapper div.BackToBack div.left div.serachresult a b {
+    margin: 0px 3px;
+    color: #000;
+}
+
+#product section.wrapper div.BackToBack div.left div.serachresult p { 
+    font-size: 15px;
+
+}
+#product section.wrapper div.BackToBack div.left div.serachresult p b {
+    margin: 0px 2px;
+
+}
+
+#product section.wrapper div.BackToBack div.left div.serachresult p.cansoled { 
+    font-weight: 600;
+
+}
+
+#product section.wrapper div.BackToBack div.right { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+#product section.wrapper div.BackToBack div.right a { 
+    text-decoration: underline;
+    font-size: 15px;
+
+
+}
+#product section.wrapper div.BackToBack div.right a:first-child { 
+    margin-right: 10px;
+    
+    
+
+}
+
+#product section.wrapper div.BackToBack div.right div.rightLast { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+    
+
+}
+
+#product section.wrapper div.BackToBack div.right div.rightLast p { 
+    font-size: 15px;
+
+}
+
+#product section.wrapper div.BackToBack div.right div.rightLast a { 
+    text-decoration: none;
+    color: #1D4ED8;
+
+
+
+
+}
+
+#product section.wrapper div.MainContainer { 
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+#product section.wrapper div.MainContainer div.productImageContainer { 
+    width: 40%;
+
+
+}
+#product section.wrapper div.MainContainer div.productImageContainer div.border { 
+    border: 1px solid #E1E1E1;
+    padding:10px;
+    border-radius: 10px;
+}
+
+#product section.wrapper div.MainContainer div.productImageContainer div.border div.productImage { 
+    width: 100%;
+    display: block;
+    
+    
+
+}
+
+#product section.wrapper div.MainContainer div.productImageContainer div.border div.productImage img { 
+    width: 100%;
+    display: block;
+
+}
+
+#product section.wrapper div.MainContainer div.productImageContainer div.ShortImage { 
+    width: 30%;
+    display: block;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+#product section.wrapper div.MainContainer div.productImageContainer div.ShortImage img { 
+    width: 100%;
+    display: block;
+    border: 1px solid #E1E1E1;
+    padding: 5px;
+    border-radius: 10px;
+   
+
+}
+
+#product section.wrapper div.MainContainer div.info { 
+    width: 60%;
+    margin: 0px 20px;
+
+}
+
+
+#product section.wrapper div.MainContainer div.info h1 { 
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom:1px solid #E1E1E1;
+    margin-bottom: 30px;
+
+  
+
+}
+
+#product section.wrapper div.MainContainer div.info span.ProductCondition { 
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+
+}
+
+#product section.wrapper div.MainContainer div.info span.ProductCondition h2 { 
+    font-size: 15px;
+  
+
+}
+
+#product section.wrapper div.MainContainer div.info span.ProductCondition h2.brand { 
+    font-weight: 700;
+    font-size: 15px;
+
+}
+
+#product section.wrapper div.MainContainer div.info div.quantitySection { 
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E1E1E1;
+
+}
+
+#product section.wrapper div.MainContainer div.info div.quantitySection h2 { 
+    font-size: 15px;
+
+}
+
+#product section.wrapper div.MainContainer div.info div.quantitySection div.count { 
+    border: 1px solid #E1E1E1;
+    padding: 10px;
+    border-radius: 8px;
+    width: 10%;
+   
+
+}
+#product section.wrapper div.MainContainer div.info div.quantitySection div.count input {
+   
+}
+
+#product section.wrapper div.MainContainer div.info div.quantitySection div.count input { 
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+
+}
+#product section.wrapper div.MainContainer div.info div.quantitySection div.availables { 
+    display: flex;
+    gap: 5px;
+    align-items: center;
+
+}
+
+#product section.wrapper div.MainContainer div.info div.quantitySection div.availables h3 { 
+    font-size: 16px;
+   
+
+}
+#product section.wrapper div.MainContainer div.info div.quantitySection div.availables h3:last-child { 
+   
+    color: #E53238;
+
+
+}
+#product section.wrapper div.MainContainer div.info div.priceSection { 
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+   
+
+}
+
+#product section.wrapper div.MainContainer div.info div.priceSection h2 { 
+    font-size: 20px;
+
+}
+
+#product section.wrapper div.MainContainer div.info div.priceSection div.price { 
+
+}
+
+#product section.wrapper div.MainContainer div.info div.priceSection div.price h3 { 
+    font-size: 25px;
+    font-weight: 600;
+
+}
+
+#product section.wrapper div.MainContainer div.info div.priceSection div.options { 
+
+}
+
+#product section.wrapper div.MainContainer div.info div.priceSection div.options p { 
+    font-size: 15px;
+
+}
+
+#product section.wrapper div.MainContainer div.info div.buySection { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+#product section.wrapper div.MainContainer div.info div.buySection button { 
+    border: 1px solid #1D4ED8;
+    padding: 10px;
+    color: #ffff;
+    font-size: 15px;
+    background: #1D4ED8;
+    border-radius: 20px;
+    width: 35%;
+    cursor: pointer;
+
+
+}
+#product section.wrapper div.MainContainer div.info div.buySection div.buyLast {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+}
+#product section.wrapper div.MainContainer div.info div.buySection div.buyLast button.addCart {
+    /* width: 30%; */
+    width: 60%;
+    border: 1px solid #E8EDFB;
+    padding: 10px 25px;
+    color: #1D4ED8;
+    font-size: 15px;
+    background: #E8EDFB;
+    border-radius: 20px;
+
+}
+
+#product section.wrapper div.MainContainer div.info div.buySection div.buyLast  #watchlist { 
+    border: 1px solid #E8EDFB;
+    padding: 10px 25px;
+    color: #1D4ED8;
+    font-size: 15px;
+    border-radius: 20px;
+    max-width: fit-content;
+   
+
+}
+/*  */
+
+
+#product section.wrapper div.MainContainer div.info div.additionalContainer { 
+   
+    margin: 20px 0px;
+
+}
+
+#product section.wrapper div.MainContainer div.info div.additionalContainer form { 
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+
+#product section.wrapper div.MainContainer div.info div.additionalContainer form input[type="checkbox"] { 
+    
+    
+
+}
+
+#product section.wrapper div.MainContainer div.info div.additionalContainer form a { 
+    font-size: 15px;
+    max-width: max-content;
+    white-space: nowrap;
+    text-decoration: underline;
+
+}
+#product section.wrapper div.MainContainer div.info div.additionalContainer form a b {
+    font-weight: 600;
+}
+
+#product section.wrapper div.MainContainer div.info div.additionalContainer a.change { 
+    font-size: 15px;
+    text-decoration: underline;
+    line-height: .7cm;
+    color: #595959;
+
+}
+
+#product section.wrapper div.MainContainer div.info div.paymentCard { 
+    border: 1px solid #F6F6F6;
+    border-radius: 20px;
+    padding: 15px;
+    background: #F6F6F6;
+
+}
+
+#product section.wrapper div.MainContainer div.info div.paymentCard div.paymentCategory { 
+    width: 90%;
+    border-bottom: 1px solid #E1E1E1;
+    padding-bottom: 20px;
+
+}
+
+#product section.wrapper div.MainContainer div.info div.paymentCard div.paymentCategory div.collectContainer { 
+    margin-top: 15px;
+
+}
+
+#product section.wrapper div.MainContainer div.info div.paymentCard div.paymentCategory div.collectContainer h2 { 
+    font-size: 15px;
+
+}
+
+#product section.wrapper div.MainContainer div.info div.paymentCard div.paymentCategory div.postage { 
+    margin-top: 15px;
+
+}
+
+#product section.wrapper div.MainContainer div.info div.paymentCard div.paymentCategory div.postage h2 { 
+    font-size: 15px;
+
+}
+
+#product section.wrapper div.MainContainer div.info div.paymentCard div.paymentCategory div.postage h2 b { 
+    font-weight: 600;
+
+}
+
+#product section.wrapper div.MainContainer div.info div.paymentCard div.paymentCategory div.delivery { 
+    margin-top: 15px;
+
+}
+
+#product section.wrapper div.MainContainer div.info div.paymentCard div.paymentCategory div.delivery h2 { 
+    
+    font-size: 15px;
+
+}
+
+#product section.wrapper div.MainContainer div.info div.paymentCard div.paymentCategory div.delivery h2 b { 
+    font-weight: 600;
+
+}
+
+#product section.wrapper div.MainContainer div.info div.paymentCard div.retrunPolicey { 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+
+}
+
+#product section.wrapper div.MainContainer div.info div.paymentCard div.retrunPolicey h2 { 
+    font-size: 18px;
+
+}
+
+#product section.wrapper div.MainContainer div.info div.paymentCard div.retrunPolicey a { 
+    font-size: 16px;
+    text-decoration: underline;
+    margin-left: 10px;
+
+}
+
+#product section.wrapper div.MainContainer div.info div.paymentCard div.paymentMenthod { 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+#product section.wrapper div.MainContainer div.info div.paymentCard div.paymentMenthod h2 { 
+    font-size: 18px;
+
+}
+
+#product section.wrapper div.MainContainer div.info div.paymentCard div.paymentMenthod ul { 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+
+}
+
+#product section.wrapper div.MainContainer div.info div.paymentCard div.paymentMenthod li { 
+    list-style: none;
+
+
+}
+#product section.wrapper div.MainContainer div.info div.paymentCard div.paymentMenthod li a  {
+    width: 50px;
+    display: block;
+
+}
+#product section.wrapper div.MainContainer div.info div.paymentCard div.paymentMenthod li a img {
+    width: 100%;
+    display: block;
+
+}
+
+
+/*  */
+
+#product section.wrapper div.MainContainer div.sellerInfo { 
+    width: 25%;
+    z-index: 10;
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.sellercard { 
+    width: 100%;
+    border: 1px solid #E1E1E1;
+    border-radius: 10px;
+    padding: 20px;
+
+
+}
+#product section.wrapper div.MainContainer div.sellerInfo div.sellercard div.sellCardFlex {
+    display: flex;
+    justify-content: space-between;
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.sellercard div.sellCardFlex span.sellerProfile { 
+    width: 50px;
+    display: block;
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.sellercard div.sellCardFlex span.sellerProfile img { 
+    width: 100%;
+    display: block;
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.sellercard div.sellCardFlex div.sellerfeedbak { 
+    width: 60%;
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.sellercard div.sellCardFlex div.sellerfeedbak h2 { 
+    font-size: 15px;
+    color: #1D4ED8;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 600;
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.sellercard div.sellCardFlex div.sellerfeedbak p { 
+    font-size: 13px;
+    color: #595959;
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.sellercard div.sellCardFlex div.saved { 
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+    
+   
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.sellercard div.sellCardFlex div.saved span.saveImageContainer { 
+    width: 20px;
+    display: block;
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.sellercard div.sellCardFlex div.saved  span.saveImageContainer img { 
+    width: 100%;
+    display: block;
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.sellercard div.sellCardFlex div.saved p { 
+    font-size: 15px;
+    font-weight: 600;
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.sellercard div.contactCard { 
+    border: 1px solid #E1E1E1;
+    padding: 5px;
+    border-radius: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.sellercard div.contactCard h2 { 
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.sellercard h3 { 
+    margin-top: 10px;
+    font-size: 15px;
+    color: #595959;
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.priceDetails { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    border: 1px solid #F1F5FF;
+    background: #F1F5FF;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.priceDetails span.tagimageContainer { 
+    width: 22px;
+    display: block;
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.priceDetails span.tagimageContainer img { 
+    width: 100%;
+    display: block;
+
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.priceDetails h2 { 
+    font-size: 14px;
+    width: 100%;
+
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.priceDetails a { 
+    font-size: 13px;
+    text-decoration: underline;
+    max-width: fit-content;
+    white-space: nowrap;
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.moneyBackContainer { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.moneyBackContainer span.moneyBackImage { 
+    width: 35px;
+    display: block;
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.moneyBackContainer span.moneyBackImage img { 
+    width: 100%;
+    display: block;
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.moneyBackContainer div.MoneyBackText { 
+    width: 100%;
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.moneyBackContainer div.MoneyBackText h2 { 
+    font-size: 18px;
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.moneyBackContainer div.MoneyBackText p { 
+    font-size: 13px;
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.featuresContainer { 
+    width: 90%;
+    margin: 20px auto;
+
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.featuresContainer span.featuresImage { 
+    width: 70px;
+    display: block;
+    margin-bottom: 10px;
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.featuresContainer span.featuresImage img { 
+    width: 100%;
+    display: block;
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.featuresContainer div.featuresText { 
+    
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.featuresContainer div.featuresText ul { 
+    margin-bottom: 10px;
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.featuresContainer div.featuresText ul li { 
+    font-size: 15px;
+    line-height: .7cm;
+    color: #595959;
+    max-width: max-content;
+    white-space: nowrap;
+   
+
+}
+
+#product section.wrapper div.MainContainer div.sellerInfo div.featuresContainer div.featuresText a { 
+    font-size: 16px;
+    text-decoration: underline;
+    color: #595959;
+
+}
+/*  */
+#categorys { 
+    padding-top: 20px;
+
+}
+
+#categorys section.wrapper { 
+
+}
+
+#categorys section.wrapper div.categoryTitle { 
+    margin-bottom: 10px;
+
+
+}
+
+#categorys section.wrapper div.categoryTitle h2 { 
+    font-size: 25px;
+    font-weight: 600;
+
+}
+
+#e_platform { 
+	padding: 20px 0;
+
+
+}
+
+#e_platform section.wrapper { 
+
+}
+
+#e_platform section.wrapper div.e_container { 
+	margin-top: 30px;
+
+}
+#e_platform section.wrapper div.e_container:first-child { 
+	margin-top: 0px;
+
+}
+
+
+#e_platform section.wrapper div.e_container div.e_header_container { 
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+
+}
+
+#e_platform section.wrapper div.e_container div.e_header_container h2 { 
+	font-size: 24px;
+	font-weight: 600;
+
+}
+
+#e_platform section.wrapper div.e_container div.e_header_container button { 
+	cursor: pointer;
+	text-decoration: underline;
+	font-size: 15px;
+
+
+}
+
+#e_platform section.wrapper div.e_container div.products { 
+	position: relative;
+	
+
+}
+
+#e_platform section.wrapper div.e_container div.products ul { 
+	 display:grid;
+	 grid-auto-flow: column;
+	 grid-auto-columns: calc((100% / 6));
+	 gap: 10px;
+	 overflow-x: auto;
+	 scroll-behavior: smooth;
+	 width: 100%;
+}
+#e_platform section.wrapper div.e_container div.products i {
+	height: 50px;
+    width: 50px;
+    background: #DBDBDB;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    right: -1%;
+    top: 26%;
+
+}
+#e_platform section.wrapper div.e_container div.products i:first-child {
+	left: -1%;
+    top: 26%;
+
+}
+#e_platform section.wrapper div.e_container div.products ul::-webkit-scrollbar {
+	display: none;
+}
+
+#e_platform section.wrapper div.e_container div.products ul li { 
+	width: 100%;
+    list-style: none;
+	
+}
+
+#e_platform section.wrapper div.e_container div.products ul li a { 
+	width: 100%;
+	
+}
+
+#e_platform section.wrapper div.e_container div.products ul li a span.product_image { 
+	width: 100%;
+	display: block;
+	
+
+}
+
+#e_platform section.wrapper div.e_container div.products ul li a span.product_image img { 
+	width: 100%;
+	display: block;
+	object-fit: contain;
+    height: auto !important;
+    aspect-ratio: 1.2;
+
+}
+
+#e_platform section.wrapper div.e_container div.products ul li a div.product_info { 
+	width: 100%;
+
+}
+
+#e_platform section.wrapper div.e_container div.products ul li a div.product_info h2 { 
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: normal; 
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    max-height: 48px; 
+    text-overflow: ellipsis;
+}
+#e_platform section.wrapper div.e_container div.products ul li a div.product_info p.price { 
+	margin-top: 10px;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+/*  */
+#detailCard { 
+   
+}
+
+#detailCard section.wrapper { 
+
+}
+#detailCard section.wrapper div.MainContainer {
+    border: 1px solid #E1E1E1;
+    border-radius: 10px;
+    
+}
+
+#detailCard section.wrapper div.MainContainer div.headerContainer { 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #E1E1E1;
+    width: 100%;
+ 
+
+}
+
+#detailCard section.wrapper div.MainContainer div.headerContainer button#aboutButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+   text-align: left;
+   height: 30px;
+   
+
+}
+
+#detailCard section.wrapper div.MainContainer div.headerContainer button#togglePostageButton { 
+  width: 90%;
+  text-align: left;
+  background:#F9FAFB;
+  height: 30px;
+ 
+ 
+}
+#detailCard section.wrapper div.MainContainer div.headerContainer button#aboutButton h2 { 
+    font-size: 16px;
+    max-width: fit-content;
+    color: #1D4ED8;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+#detailCard section.wrapper div.MainContainer div.headerContainer button#togglePostageButton h2 { 
+    margin-left: 10px;
+    font-size: 16px;
+    max-width: fit-content;
+    color: #6C6C6C;
+    font-weight: 600;
+    cursor: pointer;
+
+
+}
+#detailCard section.wrapper div.MainContainer div.bottomContainer {
+    padding: 10px 15px;
+}
+
+#detailCard section.wrapper div.MainContainer div.bottomContainer div.taitle { 
+    
+
+}
+
+#detailCard section.wrapper div.MainContainer div.bottomContainer div.taitle h2 { 
+    font-size: 15px;
+    line-height: .8cm;
+    color: #6C6C6C;
+
+}
+
+#detailCard section.wrapper div.MainContainer div.bottomContainer div.taitle div.updateContainer { 
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+}
+
+#detailCard section.wrapper div.MainContainer div.bottomContainer div.taitle div.updateContainer h2 { 
+    font-size: 15px;
+
+}
+
+#detailCard section.wrapper div.MainContainer div.bottomContainer div.taitle div.updateContainer a { 
+    text-decoration: underline;
+    color: #6C6C6C;
+    font-size: 13px;
+
+
+}
+
+#detailCard section.wrapper div.MainContainer div.bottomContainer h2.title { 
+    margin: 10px 0px;
+    font-weight: 600;
+    font-size: 25px;
+
+}
+
+#detailCard section.wrapper div.MainContainer div.bottomContainer div.detailCard { 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+
+}
+
+#detailCard section.wrapper div.MainContainer div.bottomContainer div.detailCard div.conditions { 
+    width: 60%;
+
+
+}
+
+#detailCard section.wrapper div.MainContainer div.bottomContainer div.detailCard div.conditions ul { 
+    width: 100%;
+
+}
+
+#detailCard section.wrapper div.MainContainer div.bottomContainer div.detailCard div.conditions ul li.header { 
+    margin-bottom: 20px;
+    line-height: normal;
+    height: 60px;
+
+}
+
+#detailCard section.wrapper div.MainContainer div.bottomContainer div.detailCard div.conditions ul li.header h2 { 
+    font-size: 15px;
+    white-space: wrap;
+    max-width: fit-content;
+    
+}
+
+#detailCard section.wrapper div.MainContainer div.bottomContainer div.detailCard div.conditions ul li { 
+    list-style: none;
+    line-height: 1cm;
+}
+
+#detailCard section.wrapper div.MainContainer div.bottomContainer div.detailCard div.conditions ul li h2 { 
+    font-size: 15px;
+    max-width: max-content;
+    white-space: nowrap;
+
+}
+#detailCard section.wrapper div.MainContainer div.bottomContainer div.detailCard div.conditions ul li h2 b {
+    font-weight: 600;
+}
+/*  */
+#cardBottom { 
+    padding-top: 20px;
+
+}
+
+#cardBottom section.wrapper { 
+
+}
+
+#cardBottom section.wrapper div.MainContainer { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #E1E1E1;
+    padding: 20px;
+    border-radius: 15px;
+    background:#F6F6F6;
+}
+
+#cardBottom section.wrapper div.MainContainer div.userinfo { 
+    display: flex;
+    gap: 10px;
+    align-items:center;
+
+}
+
+#cardBottom section.wrapper div.MainContainer div.userinfo span.userProfile { 
+    width: 70px;
+    display: block;
+
+}
+
+#cardBottom section.wrapper div.MainContainer div.userinfo span.userProfile img { 
+    width: 100%;
+    display: block;
+
+}
+
+#cardBottom section.wrapper div.MainContainer div.userinfo div.userText { 
+
+}
+
+#cardBottom section.wrapper div.MainContainer div.userinfo div.userText h2 { 
+    font-size: 20px;
+    font-weight: 600;
+   border-bottom: 1px solid #000;
+
+}
+
+#cardBottom section.wrapper div.MainContainer div.userinfo div.userText p { 
+    font-size: 15px;
+    font-weight: 600;
+
+}
+
+#cardBottom section.wrapper div.MainContainer div.buttons { 
+    display: block;
+
+}
+
+#cardBottom section.wrapper div.MainContainer div.buttons button.store { 
+    width: 100%;
+    border: 1px solid #1D4ED8;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 15px;
+    color: #fff;
+    background: #1D4ED8;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+}
+
+#cardBottom section.wrapper div.MainContainer div.buttons button.contact { 
+    width: 100%;
+    border: 1px solid #E1E1E1;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 15px;
+    color: #000;
+    background: #F6F6F6;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+}
+/*  */
+footer { 
+    padding-top:20px;
+
+}
+
+footer section.wrapper { 
+
+}
+
+footer section.wrapper div.bottomContainer { 
+
+}
+
+footer section.wrapper div.bottomContainer ul { 
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+
+}
+
+footer section.wrapper div.bottomContainer ul li { 
+    list-style: none;
+
+}
+
+footer section.wrapper div.bottomContainer ul li a { 
+    font-size: 15px;
+    color: #6C6C6C;
+}
+
+footer section.wrapper div.terms { 
+    margin-top: 20px;
+
+}
+
+footer section.wrapper div.terms ul { 
+    display: flex;
+    align-items: center;
+
+}
+
+footer section.wrapper div.terms ul li { 
+    list-style: none;
+
+}
+
+footer section.wrapper div.terms ul li p { 
+    font-size: 15px;
+	font-weight: 600;
+	margin: 5px 5px 0px 5px;
+
+}
+footer section.wrapper div.terms ul li a {
+    font-size: 12px;
+	text-decoration: underline;
+	font-weight: 400;
+	color: #616161;
+}
+
+
+
+/* before  button click show  */
+.sellerInfo {
+    display: none;
+}
+
+@media all and (max-width:1280px){
+    #product section.wrapper div.MainContainer div.sellerInfo div.moneyBackContainer div.MoneyBackText h2 {
+        font-size: 15px;
+    }
+    #detailCard section.wrapper div.MainContainer div.bottomContainer div.detailCard div.conditions {
+        width: 30%;
+    }
+	
+}
+
+
+
+/* Styles for the active state of the buttons */
+#aboutButton.active h2 {
+    /* Styles for aboutButton when active */
+    color: #1D4ED8;
+}
+
+#togglePostageButton.active h2 {
+    /* Styles for togglePostageButton when active */
+    color: #1D4ED8;
+}
+

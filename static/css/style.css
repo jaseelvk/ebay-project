@@ -1,0 +1,776 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	background: transparent;
+	font-weight: normal;
+	text-decoration: none;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+ol, ul {
+	list-style: none;
+}
+del {
+	text-decoration: line-through;
+}
+body {
+	font-family: 'Poppins-Regular';
+	font-size: 17px;
+	color: #000;
+	overflow-x: hidden;
+	min-width: 320px;
+	font-weight: 500;
+}
+input,textarea,select{
+	font-family: 'Poppins-Regular';
+	font-weight: 500;
+}
+
+a{
+	color: #000;
+}
+.thumb{
+	display: block;
+}
+.thumb img{
+	display: block;
+	width:100%;
+}
+p{
+	line-height:1.6em;
+	font-size: 16px;
+    font-family: 'Poppins-Regular';
+	font-weight: 500;
+	color: #000;
+}
+.hidden{
+	display:none;
+}
+br.clear {
+	clear: both;
+	line-height: 0;
+}
+.wrapper {
+	width: 98%;
+    margin: 0 auto;
+    max-width: 1330px;
+}
+
+.flex-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('../fonts/Poppins-Bold.woff2') format('woff2'),
+        url('../fonts/Poppins-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url('../fonts/Poppins-Medium.woff2') format('woff2'),
+        url('../fonts/Poppins-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('../fonts/Poppins-Regular.woff2') format('woff2'),
+        url('../fonts/Poppins-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+#HeaderTop { 
+	width: 100%;
+	padding: 15px  5px 5px 0px ;
+	border-bottom: 1px solid #DBDBDB;
+	box-shadow: 0px 8px #f7f6f6;
+
+
+
+}
+
+#HeaderTop div.container { 
+	display: flex;
+	justify-content: space-between;
+
+}
+
+#HeaderTop div.container div.left { 
+	width: 50%;
+
+
+}
+
+#HeaderTop div.container div.left ul { 
+	width: 100%;
+    display: flex;
+	gap: 15px;
+
+}
+
+#HeaderTop div.container div.left ul li { 
+	width: 15%;
+
+}
+
+#HeaderTop div.container div.left ul li a { 
+	font-size: 15px;
+
+}
+
+#HeaderTop div.container div.left ul li a span.logoGreen { 
+	width: 75px;
+	display: block;
+	padding-top: 5px;
+
+	
+
+}
+#HeaderTop div.container div.left ul li a span.logoGreen img { 
+	display: block;
+	width: 100%;
+
+}
+
+#HeaderTop div.container div.right { 
+	width: 50%;
+
+}
+
+#HeaderTop div.container div.right ul { 
+	width: 100%;
+    display: flex;
+	justify-content: flex-end;
+	gap: 24px;
+	
+
+}
+
+#HeaderTop div.container div.right ul li { 
+
+}
+
+#HeaderTop div.container div.right ul li a { 
+	display: flex;
+	gap: 6px;
+	font-size: 15px;
+
+}
+
+#HeaderTop div.container div.right ul li a span.watchList {
+	display: flex;
+	gap: 6px;
+}
+#HeaderTop div.container div.right ul li a span.watchList h5 {
+    font-size: 15px;
+}
+#HeaderTop div.container div.right ul li a span.imageContainer {
+	width: 30px;
+	display: block;
+
+}
+#HeaderTop div.container div.right ul li a span.imageContainer  img {
+	width: 100%;
+	display: block;
+}
+#HeaderTop div.container div.right ul li a span.arrow {
+	width: 10px;
+	padding-top: 10px;
+
+}
+#HeaderTop div.container div.right ul li a span.arrow  img {
+	width: 100%;
+	display: block;
+
+}
+#HeaderTop div.container div.right ul li a span.notify {
+	width: 18px;
+	display: block;
+}
+#HeaderTop div.container div.right ul li a span.notify img {
+	width: 100%;
+	display: block;
+}
+#HeaderTop div.container div.right ul li a span.cart {
+	width: 18px;
+	display: block;
+}
+#HeaderTop div.container div.right ul li a span.cart img {
+	width: 100%;
+	display: block;
+}
+/* index page styles */
+
+#searchContainer { 
+	padding: 16px 0px 16px 0px ;
+	width:100%;
+	border-bottom: 1px solid #DBDBDB;
+	box-shadow: 0px 8px #f7f6f6;
+
+}
+
+#searchContainer div.mainContainer { 
+    display: flex;
+	justify-content: space-between;
+    align-items: center;
+
+
+}
+
+#searchContainer div.mainContainer span.logContainer { 
+	width: 80px;
+	display: block;
+
+}
+
+#searchContainer div.mainContainer span.logContainer img { 
+	width: 100%;
+    display: block;
+
+}
+
+#searchContainer div.mainContainer div.searchBox { 
+	width: 75%;
+	display: flex;
+	gap: 5px;
+	align-items: center;
+	border: 1px solid #DBDBDB;
+	border-radius: 4px;
+
+
+}
+
+#searchContainer div.mainContainer div.searchBox span.categorySearch  { 
+	border-right: 1px solid #DBDBDB;
+	padding: 5px 0px 5px 0px ;
+	cursor: pointer;
+	max-width: fit-content;
+}
+
+
+#searchContainer div.mainContainer div.searchBox span.categorySearch form.category_items select { 
+	width: 100%;
+	/* appearance: none;  */
+	cursor: pointer;
+}
+#searchContainer div.mainContainer div.searchBox span.categorySearch form.category_items select option { 
+	max-width: max-content;
+}
+
+#searchContainer div.mainContainer div.searchBox span.categorySearch form.category_items select option:hover {
+	background-color: #f0f0f0; 
+  }
+
+#searchContainer div.mainContainer div.searchBox form { 
+	width: 100%;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	padding: 5px 16px 5px 10px ;
+
+}
+#searchContainer div.mainContainer div.searchBox form span.search {
+	width: 20px;
+	display: block;
+	cursor: pointer;
+
+}
+
+#searchContainer div.mainContainer div.searchBox form img { 
+	width: 100%;
+	display: block;
+
+}
+
+#searchContainer div.mainContainer div.searchBox form input { 
+	width: 100%;
+	font-size: 15px;
+
+	
+
+}
+
+#searchContainer div.mainContainer div.Buttons { 
+	display: flex;
+	gap: 10px;
+	align-items: center;
+
+}
+
+#searchContainer div.mainContainer div.Buttons button { 
+	border: 1px solid #fff;
+	padding: 10px 24px 10px 24px;
+	width: 70%;
+	font-size: 16px;
+	color: #fff;
+	background: #1D4ED8;
+	cursor: pointer;
+}
+
+#searchContainer div.mainContainer div.Buttons a { 
+	font-size: 15px;
+}
+/* select Categorys */
+
+#categorySelect { 
+	padding: 10px;
+	width: 100%;
+
+}
+
+#categorySelect div.container { 
+	width: 90%;
+	margin: 0 auto;
+
+}
+#categorySelect div.container button {
+	width: 10%;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px;
+    border: 1px solid #DBDBDB;
+    border-radius: 5px;
+    background: #fff;
+    color: #1D4ED8;
+    cursor: pointer;
+	display: none;
+}
+#categorySelect div.container ul { 
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+
+}
+
+#categorySelect div.container ul li { 
+	
+	
+}
+.active {
+	background: #E8EDFB;
+    color: #1D4ED8;
+	border-radius: 5px;
+}
+
+#categorySelect div.container ul li a { 
+	font-size: 14px;
+	font-weight: 600;
+	padding: 5px;
+
+
+
+
+}
+
+#categorySelect div.container ul li.sv_flex { 
+
+
+}
+
+#categorySelect div.container ul li.sv_flex a { 
+	display: flex;
+	gap: 5px;
+	align-items: center;
+
+}
+
+#categorySelect div.container ul li.sv_flex a span.like { 
+	width: 15px;
+	display: block;
+
+}
+
+#categorySelect div.container ul li.sv_flex a span.like img { 
+	width: 100%;
+	display: block;
+
+}
+
+#banner {
+    position: relative;
+    padding-top: 10px;
+}
+
+#banner .bnContainer {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+    overflow-x: auto;
+    cursor: pointer;
+    height: 250px;
+    border-radius: 20px;
+    position: relative; 
+}
+
+#banner .bnContainer::-webkit-scrollbar {
+    display: none;
+}
+
+#banner .bnContainer .bnItem {
+    position: relative; 
+}
+
+#banner .bnContainer .bnItem .bnImageContainer {
+    width: 100%;
+}
+
+#banner .bnContainer  .bnImageContainer img {
+    width: 100%;
+    height: 250px;
+    display: block;
+	aspect-ratio: 1;
+}
+
+#banner .bnContainer  .bnTextContainer {
+    position: absolute;
+    padding: 10px;
+    left: 65px;
+    bottom: 40px;
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+#banner .bnContainer  .bnTextContainer h1,
+#banner .bnContainer  .bnTextContainer p {
+    color: #fff;
+   
+}
+
+#banner .bnContainer  .bnTextContainer h1 {
+    font-size: 30px;
+	width: 50%;
+}
+
+#banner .bnContainer  .bnTextContainer p {
+    font-size: 14px;
+    margin: 10px 0px;  
+	
+}
+
+#banner .bnContainer  .bnTextContainer .buyButton {
+    display: inline-block;
+    margin-top: 10px; 
+}
+
+/* CSS */
+#banner .bnContainer .bnItem a .bnTextContainer .buyButton button {
+    border: 1px solid #fff;
+    background: #fff;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 20px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px; /* Adjust font size as needed */
+    cursor: pointer; /* Ensure cursor changes on hover */
+    transition: background-color 0.3s, color 0.3s; /* Add smooth transition */
+}
+
+#banner .bnContainer .bnItem a .bnTextContainer .buyButton button:hover {
+    background: #000;
+    color: #fff;
+}
+
+#e_platform { 
+	padding: 20px 0;
+
+
+}
+
+#e_platform section.wrapper { 
+
+}
+
+#e_platform section.wrapper div.e_container { 
+	margin-top: 30px;
+
+}
+#e_platform section.wrapper div.e_container:first-child { 
+	margin-top: 0px;
+
+}
+
+
+#e_platform section.wrapper div.e_container div.e_header_container { 
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+
+}
+
+#e_platform section.wrapper div.e_container div.e_header_container h2 { 
+	font-size: 24px;
+	font-weight: 600;
+
+}
+
+#e_platform section.wrapper div.e_container div.e_header_container button { 
+	cursor: pointer;
+	text-decoration: underline;
+	font-size: 15px;
+
+
+}
+
+#e_platform section.wrapper div.e_container div.products { 
+	position: relative;
+	
+
+}
+
+#e_platform section.wrapper div.e_container div.products ul { 
+	 display:grid;
+	 grid-auto-flow: column;
+	 grid-auto-columns: calc((100% / 6));
+	 gap: 10px;
+	 overflow-x: auto;
+	 scroll-behavior: smooth;
+	 width: 100%;
+}
+#e_platform section.wrapper div.e_container div.products i {
+	height: 50px;
+    width: 50px;
+    background: #DBDBDB;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    right: -1%;
+    top: 26%;
+
+}
+#e_platform section.wrapper div.e_container div.products i:first-child {
+	left: -1%;
+    top: 26%;
+
+}
+#e_platform section.wrapper div.e_container div.products ul::-webkit-scrollbar {
+	display: none;
+}
+
+#e_platform section.wrapper div.e_container div.products ul li { 
+	width: 100%;
+	position: relative;
+	
+}
+
+#e_platform section.wrapper div.e_container div.products ul li a { 
+	width: 100%;
+	
+}
+
+#e_platform section.wrapper div.e_container div.products ul li a span.product_image { 
+	width: 100%;
+	display: block;
+
+}
+
+#e_platform section.wrapper div.e_container div.products ul li a span.product_image img { 
+	width: 100%;
+	display: block;
+	object-fit: contain;
+    height: auto !important;
+    aspect-ratio: 1.2;
+
+}
+#e_platform section.wrapper div.e_container div.products ul li .add-to-wishList{
+	position: absolute;
+	z-index: 100;
+	top: 15px;
+	right: 25px;
+	cursor:pointer;
+	width: 35px;
+
+
+}
+
+#e_platform section.wrapper div.e_container div.products ul li a button img {
+	display: block;
+	width: 100%;
+	
+}
+/* chnage image */
+
+
+
+#e_platform section.wrapper div.e_container div.products ul li a div.product_info { 
+	width: 100%;
+
+}
+
+#e_platform section.wrapper div.e_container div.products ul li a div.product_info h2 { 
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: normal; 
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    max-height: 48px; 
+    text-overflow: ellipsis;
+}
+
+
+
+#e_platform section.wrapper div.e_container div.products ul li a div.product_info p.price { 
+	margin-top: 10px;
+	font-size: 16px;
+	font-weight: 600;
+	
+
+}
+/*  */
+#e_platform section.wrapper div.e_container div.products ul li .add-to-wishList-rounded-button {
+    background-color: #f2f2f2;
+    position: absolute;
+    border: none;
+    padding: 7px;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 36px;
+    top: 25px;
+    right: 12px;
+
+  }
+  
+  .add-to-wishList-rounded-button img {
+	width: 100%;
+	display: block;
+
+  }
+  .hidden {
+    display: none;
+}
+
+/*  */
+
+footer { 
+	padding-top: 20px;
+	border-top: 1px solid #DBDBDB
+
+
+}
+
+footer section.wrapper { 
+
+}
+
+footer section.wrapper div.footer_container { 
+
+}
+
+footer section.wrapper div.footer_container ul { 
+	display: flex;
+	gap: 20px;
+
+}
+
+footer section.wrapper div.footer_container ul li { 
+	width: 40%;
+	display: block;
+	
+
+}
+footer section.wrapper div.footer_container ul li div.cammunity_container {
+	margin-top: 30px;
+}
+
+footer section.wrapper div.footer_container ul li a.header { 
+	font-size: 16px;
+	font-weight: 700;
+	margin-bottom: 5px;
+	color: #616161;
+
+
+
+}
+
+footer section.wrapper div.footer_container ul li a { 
+	display: block;
+	line-height: 1cm;
+	font-size: 12px;
+	color: #616161;
+	max-width:fit-content;
+
+
+}
+
+footer section.wrapper div.terms { 
+	padding: 20px 0;
+
+}
+
+footer section.wrapper div.terms ul { 
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 80%;
+
+}
+
+footer section.wrapper div.terms ul li { 
+	
+
+}
+
+footer section.wrapper div.terms ul li p { 
+	font-size: 12px;
+	font-weight: 600;
+	margin: 5px 5px 0px 5px;
+
+	
+
+}
+footer section.wrapper div.terms ul li a { 
+	font-size: 12px;
+	text-decoration: underline;
+	font-weight: 400;
+	color: #616161;
+
+}
+/* the not product p tag style */
+div.error-message {
+	margin: 30px 0px;
+
+}
+div.error-message span.errorImage {
+	width: 20%;
+	display: block;
+	border-radius: 50%;
+	margin: 0 auto;
+	cursor: pointer;
+}
+div.error-message span.errorImage img.animated-error-image {
+	width: 100%;
+	display: block;
+	animation: featuredAnimation 1s ease-in-out infinite alternate;
+	
+}
+@keyframes featuredAnimation {
+    from {
+        transform: scale(1);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+

@@ -41,9 +41,6 @@ class Product(models.Model):
     def __str__(self):
         return self.product_name
     
-    
-
-    
 
 class ShortImages (models.Model):
     short_images = models.ImageField(upload_to='images/')

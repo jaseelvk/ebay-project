@@ -49,21 +49,7 @@ def product(request, pk):
 def create_product(request):
     serializer = ProductCreateSerializer(data=request.data)
     if serializer.is_valid():
-        # Extract category and section data from the request
-        category_id = request.data.get('product_category')
-        section_id = request.data.get('product_section')
-        
-        # Retrieve category and section objects
-        category = get_object_or_404(Category, pk=category_id)
-        section = get_object_or_404(Section, pk=section_id)
-        
-        # Add category and section to the validated data
-        serializer.validated_data['product_category'] = category
-        serializer.validated_data['product_section'] = section
-        
-        # Save the product
         serializer.save()
-        
         response_data = {
             "status_code": 6000,
             "message": "Product created successfully",
@@ -75,5 +61,4 @@ def create_product(request):
             "message": "Product creation failed",
             "data": serializer.errors,
         }
-        
-    return Response(response_data)
+        return Response(response_data)
